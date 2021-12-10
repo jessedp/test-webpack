@@ -37,6 +37,23 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     modules: [webpackPaths.srcPath, 'node_modules'],
+    fallback: {
+      assert: false,
+      child_process: false,
+      constants: false,
+      crypto: false,
+      domain: false,
+      fs: false,
+      http: false,
+      https: false,
+      net: false,
+      os: false,
+      path: false,
+      tls: false,
+      util: false,
+      stream: false,
+      zlib: false,
+    },
   },
 
   plugins: [
